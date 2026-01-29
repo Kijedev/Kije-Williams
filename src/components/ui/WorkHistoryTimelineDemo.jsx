@@ -1,10 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import WorkHistoryTimeline from "../../components/ui/WorkHistoryTimeline";
 import { Timeline } from "gsap/gsap-core";
+import ShowMoreText from "../ShowMoreText";
 
-// Animation variants
 const containerVariants = {
   hidden: {},
   visible: {
@@ -65,9 +65,7 @@ export function WorkHistoryTimelineDemo() {
                   </h1>
                   <p className="mt-2">{item.role}</p>
                   <p className="mt-2">{item.Timeline}</p>
-                  <p className="text-sm md:text-md mt-2 text-neutral-600 dark:text-neutral-500 py-3 bg-white/5 p-5 rounded text-justify">
-                    {item.desc}
-                  </p>
+                  <ShowMoreText text={item.desc} maxLength={240} />
                 </div>
               </motion.div>
             ))}
@@ -101,9 +99,7 @@ export function WorkHistoryTimelineDemo() {
                   </h1>
                   <p className="mt-2">{item.role}</p>
                   <p className="mt-2">{item.Timeline}</p>
-                  <p className="text-sm md:text-md mt-2 text-neutral-600 dark:text-neutral-500 py-3 bg-white/5 p-5 rounded text-justify">
-                    {item.desc}
-                  </p>
+                  <ShowMoreText text={item.desc} maxLength={240} />
                 </div>
               </motion.div>
             ))}
@@ -137,9 +133,7 @@ export function WorkHistoryTimelineDemo() {
                   </h1>
                   <p className="mt-2">{item.role}</p>
                   <p className="mt-2">{item.Timeline}</p>
-                  <p className="text-sm md:text-md mt-2 text-neutral-600 dark:text-neutral-500 py-3 bg-white/5 p-5 rounded text-justify">
-                    {item.desc}
-                  </p>
+                  <ShowMoreText text={item.desc} maxLength={240} />
                 </div>
               </motion.div>
             ))}

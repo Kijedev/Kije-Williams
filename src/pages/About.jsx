@@ -149,6 +149,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="flex justify-center"
           >
             <Download />
           </motion.div>

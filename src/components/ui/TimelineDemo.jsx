@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import Timeline from "../../components/ui/Timeline"
-
+import Timeline from "../../components/ui/Timeline";
+// Icons
+import { FaGithub } from "react-icons/fa";
 // Images
 import AiTeacha from "../../Image/aiteacha.png";
 import WebInfluencers from "../../Image/WebInfluencers.png";
@@ -14,6 +15,7 @@ import Echo from "../../Image/echo.png";
 import Unsplash from "../../Image/Unsplash.png";
 import grocerly from "../../Image/grocerly1.png";
 import Spotify from "../../Image/spotify.jpeg";
+import Jeton from "../../Image/jeton.png";
 
 // Animation variants
 const containerVariants = {
@@ -57,60 +59,66 @@ export function TimelineDemo() {
           <div className="grid lg:grid-cols-2 gap-6">
             {[
               {
+                img: Jeton,
+                title: "Jeton",
+                link: "https://jetonn.netlify.app/",
+                github: "https://github.com/Kijedev/jeton",
+                desc: "Jeton is a versatile digital wallet and payment app that enables users to securely store, send, receive, and exchange money in multiple currencies worldwide. It facilitates fast, low-cost international transfers, online shopping, and peer-to-peer payments using over 70 payment methods.",
+              },
+              {
                 img: AiTeacha,
                 title: "AiTeacha",
                 link: "https://www.aiteacha.com/",
-                desc:
-                  "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
+                github: "https://github.com/Kijedev/aiteacha",
+                desc: "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
               },
               {
                 img: WebInfluencers,
                 title: "WebInfluencers",
                 link: "https://www.webinfluencers.org/",
-                desc:
-                  "Strategic communications, AI innovation, talent platforms, and media publishing.",
+                github: "https://github.com/Kijedev/webinfluencers",
+                desc: "Strategic communications, AI innovation, talent platforms, and media publishing.",
               },
               {
                 img: Imotalenthub,
                 title: "Imo Talent-Hub",
                 link: "https://www.imotalenthub.com/",
-                desc:
-                  "Connecting Imo’s brightest minds with global opportunities.",
+                github: "https://github.com/Kijedev/imotalenthub",
+                desc: "Connecting Imo’s brightest minds with global opportunities.",
               },
               {
                 img: Eyeonimo,
                 title: "Eyeonimo",
                 link: "https://www.eyeonimo.com/",
-                desc:
-                  "Nigeria’s premier investment destination in the Eastern Region.",
+                github: "https://github.com/Kijedev/eyeonimo",
+                desc: "Nigeria’s premier investment destination in the Eastern Region.",
               },
               {
                 img: Techsoma,
                 title: "Techsoma Africa",
                 link: "https://www.techsoma.africa/",
-                desc:
-                  "Insights on Africa’s thriving tech ecosystem.",
+                desc: "Insights on Africa’s thriving tech ecosystem.",
               },
               {
                 img: Positivus,
                 title: "Positivus",
                 link: "https://positivusco.netlify.app/",
-                desc:
-                  "A digital marketing agency website focused on growth.",
+                github: "https://github.com/Kijedev/positivus",
+                desc: "A digital marketing agency website focused on growth.",
               },
               {
                 img: Echo,
                 title: "Echo",
                 link: "https://echoomusicapp.netlify.app/",
-                desc:
-                  "An uninterrupted music streaming experience.",
+                github: "https://github.com/Kijedev/echoo",
+                desc: "An uninterrupted music streaming experience.",
               },
               {
                 img: Unsplash,
                 title: "Unsplash Web",
                 link: "https://kijeunsplash.netlify.app/",
-                desc:
-                  "A sophisticated Unsplash-style image gallery app.",
+                github: "https://github.com/Kijedev/unsplash",
+                desc: "A sophisticated Unsplash-style image gallery app.",
               },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -127,10 +135,32 @@ export function TimelineDemo() {
                   <h1 className="text-white font-bold text-3xl mt-3">
                     {item.title}
                   </h1>
-                  <p className="text-sm mt-2 text-neutral-600">
+                </Link>
+
+                <div>
+                  <p className="text-sm mt-2 text-neutral-600 truncate">
                     {item.desc}
                   </p>
-                </Link>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex gap-4 mt-4">
+                  <Link
+                    to={item.github}
+                    target="_blank"
+                    className="flex items-center gap-2 cursor-pointer text-white font-light border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 transition-colors duration-300"
+                  >
+                    <FaGithub />
+                    Github
+                  </Link>
+                  <Link
+                    to={item.github}
+                    target="_blank"
+                    className="block cursor-pointer"
+                  >
+                    More Details
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -153,15 +183,16 @@ export function TimelineDemo() {
                 img: grocerly,
                 title: "Grocerly",
                 link: "https://github.com/Kijeosowo/Grocerly",
-                desc:
-                  "A grocery delivery app built with Expo and React Native.",
+                github: "https://github.com/Kijedev/Grocerly",
+                desc: "A grocery delivery app built with Expo and React Native.",
               },
               {
                 img: Spotify,
                 title: "Spotify Wrapped",
                 link: "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
-                desc:
-                  "A Spotify Wrapped clone with original UI and animations.",
+                github:
+                  "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
+                desc: "A Spotify Wrapped clone with original UI and animations.",
               },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -180,9 +211,7 @@ export function TimelineDemo() {
                   <h1 className="text-white font-bold text-3xl mt-3">
                     {item.title}
                   </h1>
-                  <p className="text-sm mt-2 text-neutral-600">
-                    {item.desc}
-                  </p>
+                  <p className="text-sm mt-2 text-neutral-600">{item.desc}</p>
                 </Link>
               </motion.div>
             ))}
