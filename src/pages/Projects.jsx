@@ -137,7 +137,7 @@ const Projects = () => {
   );
 
   return (
-    <div
+    <section
       className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white"
       id="projects"
     >
@@ -248,7 +248,7 @@ const Projects = () => {
           </div>
         </div>
       </main>
-    </div>
+    </section>
   );
 };
 

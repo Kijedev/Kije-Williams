@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Certification from "./pages/Certification";
 import CustomCursor from "./components/ui/CustomCursor";
 import TimelineDemo from "./components/ui/TimelineDemo";
+import JetonLink from "./Details/Jeton";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/projects" element={<TimelineDemo />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/certification" element={<Certification />} />
+        <Route path="/jeton" element={<JetonLink />} />
       </Routes>
     </>
   );

@@ -69,14 +69,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <p className="text-neutral-400 mb-4">Quick Links</p>
+            <p className="text-neutral-700 mb-4">Quick Links</p>
             <ul className="flex flex-col gap-3 text-lg font-light">
               <li className="hover:text-stone-500 transition-colors">
                 <a href="/about">About</a>
               </li>
-              {/* <li className="hover:text-stone-500 transition-colors">
-                <a href="#blogpost">Articles</a>
-              </li> */}
               <li className="hover:text-stone-500 transition-colors">
                 <a href="/projects">Projects</a>
               </li>

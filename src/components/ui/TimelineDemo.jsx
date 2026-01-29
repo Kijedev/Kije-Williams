@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import Timeline from "../../components/ui/Timeline";
 // Icons
 import { FaGithub } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
 // Images
 import AiTeacha from "../../Image/aiteacha.png";
 import WebInfluencers from "../../Image/WebInfluencers.png";
@@ -17,7 +18,6 @@ import grocerly from "../../Image/grocerly1.png";
 import Spotify from "../../Image/spotify.jpeg";
 import Jeton from "../../Image/jeton.png";
 
-// Animation variants
 const containerVariants = {
   hidden: {},
   visible: {
@@ -56,14 +56,15 @@ export function TimelineDemo() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-y-10 gap-x-6">
             {[
               {
                 img: Jeton,
                 title: "Jeton",
                 link: "https://jetonn.netlify.app/",
                 github: "https://github.com/Kijedev/jeton",
-                desc: "Jeton is a versatile digital wallet and payment app that enables users to securely store, send, receive, and exchange money in multiple currencies worldwide. It facilitates fast, low-cost international transfers, online shopping, and peer-to-peer payments using over 70 payment methods.",
+                details: "/jeton",
+                desc: "Jeton is a versatile digital wallet and payment app that enables users to securely store, send, receive, and exchange money in multiple currencies worldwide.",
               },
               {
                 img: AiTeacha,
@@ -138,9 +139,7 @@ export function TimelineDemo() {
                 </Link>
 
                 <div>
-                  <p className="text-sm mt-2 text-neutral-600 truncate">
-                    {item.desc}
-                  </p>
+                  <p className="text-sm mt-2 text-neutral-600">{item.desc}</p>
                 </div>
 
                 {/* Buttons */}
@@ -148,19 +147,20 @@ export function TimelineDemo() {
                   <Link
                     to={item.github}
                     target="_blank"
-                    className="flex items-center gap-2 cursor-pointer text-white font-light border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 transition-colors duration-300"
+                    className="flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
                     <FaGithub />
                     Github
                   </Link>
                   <Link
-                    to={item.github}
-                    target="_blank"
-                    className="block cursor-pointer"
+                    to={item.details}
+                    className="flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
+                    <FaRegEyeSlash />
                     More Details
                   </Link>
                 </div>
+                {/* <hr className="border-white/10 mt-5 mb-5" /> */}
               </motion.div>
             ))}
           </div>
