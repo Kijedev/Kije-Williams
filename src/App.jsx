@@ -11,6 +11,7 @@ import Certification from "./pages/Certification";
 import CustomCursor from "./components/ui/CustomCursor";
 import TimelineDemo from "./components/ui/TimelineDemo";
 import JetonLink from "./Details/Jeton";
+import AiTeachaLink from "./Details/AiTeacha";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/certification" element={<Certification />} />
         <Route path="/jeton" element={<JetonLink />} />
+        <Route path="/aiteacha" element={<AiTeachaLink />} />
       </Routes>
     </>
   );

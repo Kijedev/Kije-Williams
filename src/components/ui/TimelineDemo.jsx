@@ -71,6 +71,7 @@ export function TimelineDemo() {
                 title: "AiTeacha",
                 link: "https://www.aiteacha.com/",
                 github: "https://github.com/Kijedev/aiteacha",
+                details: "/aiteacha",
                 desc: "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
               },
               {
