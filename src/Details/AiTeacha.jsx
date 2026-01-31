@@ -2,16 +2,19 @@ import { useState, useEffect } from "react";
 import BackBtn from "../components/BackBtn";
 import { motion } from "framer-motion";
 import { TbChevronsRight } from "react-icons/tb";
+import Footer from "../components/Footer";
+import { Link } from "react-router";
+import { FaGithub } from "react-icons/fa";
 
 const AiTeacha = () => {
-  const [showContent, setShowContent] = useState(false);
+  //   const [showContent, setShowContent] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => {
+  //       setShowContent(true);
+  //     }, 500);
+  //     return () => clearTimeout(timer);
+  //   }, []);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -55,108 +58,185 @@ const AiTeacha = () => {
 
   const features = [
     {
-      title: "AI Lesson Plan Generator",
+      title: "Personalized AI training and tool customizations",
     },
     {
-      title: "Assessment & Exam Generator",
+      title: "Unlimited chat and resource histories",
     },
     {
-      title: "Scheme of Work Generator",
+      title: "Unlimited number of educators",
     },
     {
-      title: "Digital Lesson Notes",
+      title: "45 advanced, time-saving AI tools",
     },
     {
-      title: "Virtual Classroom & Support",
+      title:
+        "Generate unlimited AI-powered slides, exportable directly to Microsoft PowerPoint",
     },
     {
       title: "Zyra AI Chatbot",
     },
     {
-      title: "PowerPoint Generator",
+      title: "Unlimited content generation as you need",
+    },
+  ];
+
+  const challenges = [
+    {
+      problem:
+        "Problem: The Initial code was not well structured, took me a little time to understand.",
+      solution:
+        "Solution: I took my time to understand the initial code that was written.",
+      outcome:
+        "Outcome: I was able to navigate through the code and find the necessary files to make the necessary changes.",
+    },
+    {
+      problem:
+        "Problem: Implementing a pre-test api for the students classroom",
+      solution:
+        "Solution: I implemented a pre-test api for the students classroom using REST APIs.",
+      outcome:
+        "Outcome: The pre-test api was implemented successfully and the students were able to take pre-tests before joining each classroom.",
+    },
+    {
+      problem: "Problem: Large code base / old code",
+      solution:
+        "I refactored the code to make it more maintainable and scalable.",
+      outcome:
+        "The code was refactored successfully and the application was able to run smoothly.",
     },
   ];
 
   return (
-    <div className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1]">
-      <div className="animate-slideUp h-[100vh] bg-gradient-to-b from-black via-[#111] to-black z-100 relative" />
+    <div className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1] font-poppins">
+      {/* <div className="animate-slideUp h-[100vh] bg-gradient-to-b from-black via-[#111] to-black z-100 relative" /> */}
 
-      {showContent && (
-        <>
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="px-6 lg:px-0 max-w-7xl mx-auto lg:mt-[-80vh] mt-[-85vh]"
+      <div className="lg:px-0 max-w-7xl mx-auto pt-32">
+        <BackBtn />
+
+        <header className="mt-10 flex flex-col gap-5 ml-6 lg:ml-0">
+          <h1 className="text-4xl lg:text-8xl font-bold text-white">
+            AiTeacha
+          </h1>
+          <p className="text-neutral-500 text-lg max-w-6xl">
+            AiTeacha is an AI-powered educational app that helps teachers reduce
+            workload by generating lesson plans, assessments, curricula, and
+            handouts in seconds. Key features include subject-specific solvers
+            (Math, Physics, Chemistry), grammar tools, PowerPoint generation,
+            and a 30-second scheme of work/lesson note creator to enhance
+            teaching efficiency.
+          </p>
+          <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500 ">
+            Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js,
+            Git/GitHub.
+          </span>
+        </header>
+
+        <section>
+          <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
+            My Role & Contributuions
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-10 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">
+            {responsibilities.map((responsibility, index) => {
+              return (
+                <div
+                  key={index}
+                  className="border border-white/15 p-4 rounded-lg"
+                >
+                  <span className="flex gap-2">
+                    <TbChevronsRight className="text-4xl lg:text-2xl" />
+                    <p className="text-neutral-500 text-md">
+                      {responsibility.description}
+                    </p>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
+            Core Features
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">
+            {features.map((feature, index) => {
+              return (
+                <div
+                  key={index}
+                  className="border border-white/15 p-4 rounded-lg flex items-center justify-center"
+                >
+                  <span className="flex">
+                    <p className="text-neutral-500 text-center text-md">
+                      {feature.title}
+                    </p>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="">
+          <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
+            Key Challenges & Solutions
+          </h2>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 p-6 bg-gradient-to-br from-[#111]/10 via-[#000]/50 to-[#111]/10">
+            {challenges.map((challenge, index) => {
+              return (
+                <div
+                  key={index}
+                  className="border border-white/5 p-4 rounded-lg flex gap-4"
+                >
+                  <span className="flex flex-col">
+                    <p className="text-red-500">{challenge.problem}</p>
+                    <p className="text-green-500">{challenge.solution}</p>
+                    <p className="text-neutral-500">{challenge.outcome}</p>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://github.com/Dongido/AITeacha_v3_design"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-[300px] h-[60px] rounded-md border border-white/5
+             flex items-center justify-center overflow-hidden
+             transition duration-300 active:scale-95"
           >
-            <BackBtn />
+            <div
+              className="relative flex items-center gap-2
+               transition-all duration-300 ease-in-out
+               group-hover:translate-x-6"
+            >
+              <FaGithub
+                className="text-white text-2xl
+                 transition-all duration-300 ease-in-out
+                 group-hover:absolute
+                 group-hover:left-8
+                 group-hover:-translate-x-1/2"
+              />
+              <span
+                className="text-white text-[1.04em] whitespace-nowrap
+                 transition-all duration-300 ease-in-out
+                 group-hover:opacity-0
+                 group-hover:translate-x-4"
+              >
+                View on GitHub
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
 
-            <header className="mt-10 flex flex-col gap-5">
-              <h1 className="text-4xl lg:text-8xl font-bold text-white">
-                AiTeacha
-              </h1>
-              <p className="text-neutral-500 text-lg max-w-2xl">
-                An EdTech platform that uses different AI tools to aid teachers
-                day-to-day tasks and improve student outcomes.
-              </p>
-
-              <h1 className="border-l-2 border-red-500 pl-4 mt-10 text-xl lg:text-xl">
-                Stacks Used: React.js, TypeScript, Tailwind CSS, Axios,
-                Git/GitHub.
-              </h1>
-
-              <div>
-                <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-xl lg:text-2xl">
-                  My Role & Contributuions
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 bg-gradient-to-b from-[#111] via-[#000] to-[#111] p-6 rounded-lg">
-                  {responsibilities.map((responsibility, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="border border-white/15 p-4 rounded-lg"
-                      >
-                        <span className="flex gap-2">
-                          <TbChevronsRight className="text-2xl" />
-                          <p className="text-neutral-500 text-md">
-                            {responsibility.description}
-                          </p>
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div>
-                <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-xl lg:text-2xl">
-                  Core Features
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 bg-gradient-to-b from-[#111] via-[#000] to-[#111] p-6 rounded-lg">
-                  {features.map((feature, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="border border-white/15 p-4 rounded-lg h-20 w-full flex items-center justify-center"
-                      >
-                        <span className="flex">
-                          {/* <TbChevronsRight className="text-2xl" /> */}
-                          <p className="text-neutral-500 text-center text-md">
-                            {feature.title}
-                          </p>
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </header>
-          </motion.div>
-        </>
-      )}
+      <Footer />
     </div>
   );
 };

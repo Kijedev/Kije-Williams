@@ -28,10 +28,10 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 pt-32 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl font-poppins">
           My Projects journey
         </h2>
-        <p className="text-neutral-600 dark:text-neutral-600 text-sm md:text-base max-w-sm">
+        <p className="text-neutral-600 dark:text-neutral-600 text-sm md:text-base max-w-sm font-poppins">
           These are some of the projets i've worked on.
         </p>
       </div>
@@ -48,7 +48,7 @@ export const Timeline = ({ data }) => {
                   <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
                 </div>
 
-                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 font-poppins">
                   {item.title}
                 </h3>
               </div>
@@ -56,7 +56,7 @@ export const Timeline = ({ data }) => {
 
             {/* Content */}
             <div className="relative pl-20 pr-4 md:pl-4 w-full pb-20">
-              <h3 className="md:hidden block text-2xl mb-4 font-bold text-neutral-500">
+              <h3 className="md:hidden block text-2xl mb-4 font-bold text-neutral-500 font-poppins">
                 {item.title}
               </h3>
               {item.content}

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import "./App.css";
+import '@fontsource/poppins';
 // components
 import NavbarMenu from "./components/NavbarMenu";
 import Homepage from "./components/Homepage";

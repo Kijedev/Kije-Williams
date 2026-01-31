@@ -21,7 +21,7 @@ const Certification = () => {
       className="bg-gradient-to-br from-black via-[#111] to-[#111] h-screen"
     >
         <motion.div
-          className="text-center space-y-3"
+          className="text-center space-y-3 font-poppins"
           variants={popupVariants}
           initial="hidden"
           whileInView="visible"

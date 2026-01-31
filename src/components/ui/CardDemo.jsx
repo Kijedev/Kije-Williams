@@ -147,7 +147,7 @@ export const CardTitle = ({ children, className }) => {
   return (
     <h3
       className={cn(
-        "lg:text-6xl text-4xl text-center font-semibold text-gray-800 dark:text-white py-2",
+        "lg:text-6xl text-4xl text-center font-semibold text-gray-800 dark:text-white py-2 font-poppins",
         className
       )}
     >
@@ -160,7 +160,7 @@ export const CardDescription = ({ children, className }) => {
   return (
     <p
       className={cn(
-        "lg:text-lg text-md pt-2 text-center font-normal text-neutral-600 dark:text-neutral-400",
+        "lg:text-lg text-md pt-2 text-center font-normal text-neutral-600 dark:text-neutral-400 font-poppins",
         className
       )}
     >

@@ -36,8 +36,8 @@ const Footercta = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Text */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-2xl sm:text-3xl lg:text-5xl font-light text-gray-200">
+          <div className="space-y-3 sm:space-y-4 font-poppins">
+            <h3 className="text-2xl sm:text-3xl lg:text-5xl font-light text-gray-200 max-w-xl">
               Ready to bring your ideas to life?
             </h3>
             <p className="text-sm sm:text-base lg:text-xl text-neutral-400">

@@ -7,6 +7,8 @@ import { IoBookOutline } from "react-icons/io5";
 import { LuCodeXml } from "react-icons/lu";
 import { RiContactsBook3Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
+import { PiHamburger } from "react-icons/pi";
+import { IoClose } from "react-icons/io5";
 
 const navItems = [
   { name: "About", path: "/about", scrollId: null, icon: <CiUser /> },
@@ -48,7 +50,7 @@ const NavbarMenu = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
+    <div className="fixed top-0 left-0 right-0 z-50 ">
       <div
         className="
       mx-auto
@@ -58,15 +60,13 @@ const NavbarMenu = () => {
       flex items-center justify-between
       rounded-full
       backdrop-blur-sm
-    
 border border-white/15
-shadow-lg shadow-black/20
-    "
+shadow-lg shadow-black/20 lg:shadow-black/0"
       >
         <Logo />
 
         {/* Desktop Menu */}
-        <nav className="hidden md:block">
+        <nav className="hidden md:block font-poppins">
           <ul className="text-white/70 text-[1rem] flex gap-6 font-light">
             {navItems.map((item) => (
               <li
@@ -85,14 +85,14 @@ shadow-lg shadow-black/20
           className="md:hidden text-white text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <FiX /> : <FiMenu />}
+          {menuOpen ? <IoClose /> : <PiHamburger />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="absolute top-[90px] left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-black/70 backdrop-blur-xl rounded-2xl shadow-lg p-6 md:hidden">
-          <ul className="flex flex-col gap-4 text-white text-lg">
+        <div className="absolute top-[100px] left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-black/10 border border-white/5 backdrop-blur-xl rounded-2xl shadow-lg p-6 md:hidden">
+          <ul className="flex flex-col gap-8 text-white text-lg">
             {navItems.map((item) => (
               <li
                 key={item.name}

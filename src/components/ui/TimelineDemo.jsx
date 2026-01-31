@@ -70,7 +70,7 @@ export function TimelineDemo() {
                 img: AiTeacha,
                 title: "AiTeacha",
                 link: "https://www.aiteacha.com/",
-                github: "https://github.com/Kijedev/aiteacha",
+                github: "https://github.com/Dongido/AITeacha_v3_design",
                 details: "/aiteacha",
                 desc: "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
               },
@@ -134,13 +134,13 @@ export function TimelineDemo() {
                     alt={item.title}
                     className="rounded-xl hover:scale-105 transition-transform duration-500"
                   />
-                  <h1 className="text-white font-bold text-3xl mt-3">
+                  <h1 className="text-white font-bold text-3xl mt-3 font-poppins">
                     {item.title}
                   </h1>
                 </Link>
 
                 <div>
-                  <p className="text-sm mt-2 text-neutral-600">{item.desc}</p>
+                  <p className="text-sm mt-2 text-neutral-600 font-poppins">{item.desc}</p>
                 </div>
 
                 {/* Buttons */}
@@ -148,14 +148,14 @@ export function TimelineDemo() {
                   <Link
                     to={item.github}
                     target="_blank"
-                    className="flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
+                    className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
                     <FaGithub />
                     Github
                   </Link>
                   <Link
                     to={item.details}
-                    className="flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
+                    className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
                     <FaRegEyeSlash />
                     More Details

@@ -56,7 +56,7 @@ export function FlipWordsDemo() {
       {/* Paragraph */}
       <motion.p
         variants={itemVariants}
-        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8 max-w-2xl mx-auto text-center"
+        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8 max-w-3xl mx-auto text-center font-poppins"
       >
         A Certified <strong>Altschool Africa</strong> Frontend Developer
         dedicated to creating visually stunning and user-friendly web and mobile

@@ -119,7 +119,7 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("web"); // default tab
+  const [activeTab, setActiveTab] = useState("web"); 
 
   const popupVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 40 },

@@ -1,3 +1,7 @@
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 #preloader {
   position: fixed;
   top: 0;

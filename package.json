@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@fontsource/birthstone": "^5.2.6",
+    "@fontsource/poppins": "^5.2.7",
     "@tabler/icons-react": "^3.36.0",
     "@tanstack/react-query": "^5.86.0",
     "clsx": "^2.1.1",

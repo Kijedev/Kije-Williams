@@ -131,25 +131,11 @@
 }
 
 @layer base {
-  /* * {
-    border-color: var(--border);
-    outline: 1px solid color-mix(in oklab, var(--ring) 50%, transparent);
-  } */
   body {
     background-color: var(--background);
     color: var(--foreground);
   }
 }
-
-/* Added marquee animation styles */
-/* .modern-marquee {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-} */
 
 .marquee-container {
   overflow: hidden;

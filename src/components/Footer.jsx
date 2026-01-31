@@ -5,7 +5,7 @@ import Marquee from "../components/Marquee";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-black via-[#111] to-black text-white">
+    <footer className="bg-gradient-to-br from-black via-[#111] to-black text-white font-poppins">
       <Marquee />
 
       {/* Main Container */}
@@ -17,7 +17,7 @@ const Footer = () => {
 
             {/* Name + Bio */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light Birthstone">
+              <h1 className="text-3xl sm:text-4xl lg:text-3xl font-light text-neutral-700">
                 Kije Williams
               </h1>
               <p className="text-sm sm:text-base text-neutral-400 max-w-md">
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-6 text-xl">
+            <div className="flex gap-4 text-xl">
               <Link
                 to="https://www.linkedin.com/in/williams-kijeosowo-237749224/"
                 target="_blank"

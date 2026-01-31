@@ -28,7 +28,7 @@ const About = () => {
   };
 
   return (
-    <section className="bg-black text-neutral-500">
+    <section className="bg-black text-neutral-500 font-poppins">
       {/* Intro slide */}
       <div className="animate-slideUp h-[100vh] bg-gradient-to-br from-black via-[#111] to-black z-50" />
 
