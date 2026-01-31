@@ -114,23 +114,26 @@ const AiTeacha = () => {
       <div className="lg:px-0 max-w-7xl mx-auto pt-32">
         <BackBtn />
 
-        <header className="mt-10 flex flex-col gap-5 ml-6 lg:ml-0">
+        <motion.header
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mt-10 flex flex-col gap-5 ml-6 lg:ml-0"
+        >
           <h1 className="text-4xl lg:text-8xl font-bold text-white">
             AiTeacha
           </h1>
           <p className="text-neutral-500 text-lg max-w-6xl">
             AiTeacha is an AI-powered educational app that helps teachers reduce
             workload by generating lesson plans, assessments, curricula, and
-            handouts in seconds. Key features include subject-specific solvers
-            (Math, Physics, Chemistry), grammar tools, PowerPoint generation,
-            and a 30-second scheme of work/lesson note creator to enhance
-            teaching efficiency.
+            handouts in seconds.
           </p>
-          <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500 ">
+          <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
             Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js,
             Git/GitHub.
           </span>
-        </header>
+        </motion.header>
 
         <section>
           <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
@@ -138,21 +141,24 @@ const AiTeacha = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-10 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">
-            {responsibilities.map((responsibility, index) => {
-              return (
-                <div
-                  key={index}
-                  className="border border-white/15 p-4 rounded-lg"
-                >
-                  <span className="flex gap-2">
-                    <TbChevronsRight className="text-4xl lg:text-2xl" />
-                    <p className="text-neutral-500 text-md">
-                      {responsibility.description}
-                    </p>
-                  </span>
-                </div>
-              );
-            })}
+            {responsibilities.map((responsibility, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="border border-white/15 p-4 rounded-lg"
+              >
+                <span className="flex gap-2">
+                  <TbChevronsRight className="text-4xl lg:text-2xl" />
+                  <p className="text-neutral-500 text-md">
+                    {responsibility.description}
+                  </p>
+                </span>
+              </motion.div>
+            ))}
           </div>
         </section>
 
@@ -162,20 +168,21 @@ const AiTeacha = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">
-            {features.map((feature, index) => {
-              return (
-                <div
-                  key={index}
-                  className="border border-white/15 p-4 rounded-lg flex items-center justify-center"
-                >
-                  <span className="flex">
-                    <p className="text-neutral-500 text-center text-md">
-                      {feature.title}
-                    </p>
-                  </span>
-                </div>
-              );
-            })}
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="border border-white/15 p-4 rounded-lg flex items-center justify-center"
+              >
+                <p className="text-neutral-500 text-center text-md">
+                  {feature.title}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </section>
 
@@ -185,24 +192,33 @@ const AiTeacha = () => {
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-6 p-6 bg-gradient-to-br from-[#111]/10 via-[#000]/50 to-[#111]/10">
-            {challenges.map((challenge, index) => {
-              return (
-                <div
-                  key={index}
-                  className="border border-white/5 p-4 rounded-lg flex gap-4"
-                >
-                  <span className="flex flex-col">
-                    <p className="text-red-500">{challenge.problem}</p>
-                    <p className="text-green-500">{challenge.solution}</p>
-                    <p className="text-neutral-500">{challenge.outcome}</p>
-                  </span>
-                </div>
-              );
-            })}
+            {challenges.map((challenge, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+                className="border border-white/5 p-4 rounded-lg flex gap-4"
+              >
+                <span className="flex flex-col">
+                  <p className="text-red-500">{challenge.problem}</p>
+                  <p className="text-green-500">{challenge.solution}</p>
+                  <p className="text-neutral-500">{challenge.outcome}</p>
+                </span>
+              </motion.div>
+            ))}
           </div>
         </section>
 
-        <div className="mt-10 flex justify-center">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-10 flex justify-center"
+        >
           <a
             href="https://github.com/Dongido/AITeacha_v3_design"
             target="_blank"
@@ -233,7 +249,7 @@ const AiTeacha = () => {
               </span>
             </div>
           </a>
-        </div>
+        </motion.div>
       </div>
 
       <Footer />

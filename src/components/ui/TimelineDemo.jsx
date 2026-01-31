@@ -72,6 +72,7 @@ export function TimelineDemo() {
                 link: "https://www.aiteacha.com/",
                 github: "https://github.com/Dongido/AITeacha_v3_design",
                 details: "/aiteacha",
+                live: true,
                 desc: "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
               },
               {
@@ -79,6 +80,7 @@ export function TimelineDemo() {
                 title: "WebInfluencers",
                 link: "https://www.webinfluencers.org/",
                 github: "https://github.com/Kijedev/webinfluencers",
+                live: true,
                 desc: "Strategic communications, AI innovation, talent platforms, and media publishing.",
               },
               {
@@ -86,6 +88,7 @@ export function TimelineDemo() {
                 title: "Imo Talent-Hub",
                 link: "https://www.imotalenthub.com/",
                 github: "https://github.com/Kijedev/imotalenthub",
+                live: true,
                 desc: "Connecting Imo’s brightest minds with global opportunities.",
               },
               {
@@ -93,12 +96,14 @@ export function TimelineDemo() {
                 title: "Eyeonimo",
                 link: "https://www.eyeonimo.com/",
                 github: "https://github.com/Kijedev/eyeonimo",
+                live: true,
                 desc: "Nigeria’s premier investment destination in the Eastern Region.",
               },
               {
                 img: Techsoma,
                 title: "Techsoma Africa",
                 link: "https://www.techsoma.africa/",
+                live: true,
                 desc: "Insights on Africa’s thriving tech ecosystem.",
               },
               {
@@ -129,18 +134,31 @@ export function TimelineDemo() {
                   target="_blank"
                   className="block cursor-pointer"
                 >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="rounded-xl hover:scale-105 transition-transform duration-500"
-                  />
+                  <div className="relative overflow-hidden rounded-xl">
+                    {item.live && (
+                      <span
+                        className="absolute top-2 left-[-45px] z-10 bg-red-600 text-white text-xs font-semibold px-12 py-1 rotate-[-45deg] shadow-lg "
+                      >
+                        <p className="animate-pulse"> LIVE</p>
+                      </span>
+                    )}
+
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="rounded-xl hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
                   <h1 className="text-white font-bold text-3xl mt-3 font-poppins">
                     {item.title}
                   </h1>
                 </Link>
 
                 <div>
-                  <p className="text-sm mt-2 text-neutral-600 font-poppins">{item.desc}</p>
+                  <p className="text-sm mt-2 text-neutral-600 font-poppins">
+                    {item.desc}
+                  </p>
                 </div>
 
                 {/* Buttons */}
