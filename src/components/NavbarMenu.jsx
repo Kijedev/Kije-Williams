@@ -67,11 +67,11 @@ shadow-lg shadow-black/20 lg:shadow-black/0"
 
         {/* Desktop Menu */}
         <nav className="hidden md:block font-poppins">
-          <ul className="text-white/70 text-[1rem] flex gap-6 font-light">
+          <ul className="text-white text-[1rem] flex gap-6 font-light">
             {navItems.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 hover:text-white transition-colors duration-300"
+                className="flex items-center gap-2 hover:text-neutral-500 transition-colors duration-300"
               >
                 <span className="text-lg">{item.icon}</span>
                 <Link to={item.path}>{item.name}</Link>
