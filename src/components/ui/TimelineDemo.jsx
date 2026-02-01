@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router";
 import Timeline from "../../components/ui/Timeline";
 // Icons
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 // Images
@@ -11,6 +12,7 @@ import WebInfluencers from "../../Image/WebInfluencers.png";
 import Imotalenthub from "../../Image/imotalenthub.png";
 import Eyeonimo from "../../Image/eyeonimo.png";
 import Techsoma from "../../Image/techsomaafrica.png";
+import Techsomame from "../../Image/techsomame.png";
 import Positivus from "../../Image/positivus.png";
 import Echo from "../../Image/echo.png";
 import Unsplash from "../../Image/Unsplash.png";
@@ -108,7 +110,15 @@ export function TimelineDemo() {
                 link: "https://www.techsoma.africa/",
                 details: "/techsoma",
                 live: true,
-                desc: "Insights on Africa’s thriving tech ecosystem.",
+                desc: "Insights on Africa's thriving tech ecosystem.",
+              },
+              {
+                img: Techsomame,
+                title: "Techsoma Middle East",
+                link: "https://www.techsoma.africa/",
+                details: "/techsomame",
+                live: true,
+                desc: "Insights on the Middle East's thriving tech ecosystem.",
               },
               {
                 img: Positivus,
@@ -136,57 +146,45 @@ export function TimelineDemo() {
               },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Link
-                  to={item.link}
-                  target="_blank"
-                  className="block cursor-pointer"
-                >
-                  <div className="relative overflow-hidden rounded-xl">
-                    {item.live && (
-                      <span
-                        className="absolute top-2 left-[-45px] z-10 bg-red-600 text-white text-xs font-semibold px-12 py-1 rotate-[-45deg] shadow-lg "
-                      >
-                        <p className="animate-pulse"> LIVE</p>
-                      </span>
-                    )}
+                <div className="relative overflow-hidden rounded-xl">
+                  {item.live && (
+                    <span className="absolute top-2 left-[-45px] z-10 bg-red-600 text-white text-xs font-semibold px-12 py-1 rotate-[-45deg] shadow-lg ">
+                      <p className="animate-pulse"> LIVE</p>
+                    </span>
+                  )}
 
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="rounded-xl hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  <h1 className="text-white font-bold text-3xl mt-3 font-poppins">
-                    {item.title}
-                  </h1>
-                </Link>
-
-                <div>
-                  <p className="text-sm mt-2 text-neutral-600 font-poppins">
-                    {item.desc}
-                  </p>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-xl hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
+
+                <h1 className="text-white font-bold text-3xl mt-3 font-poppins">
+                  {item.title}
+                </h1>
+                <p className="text-sm mt-2 text-neutral-600 font-poppins">
+                  {item.desc}
+                </p>
 
                 {/* Buttons */}
                 <div className="flex gap-4 mt-4">
                   <Link
-                    to={item.github}
+                    to={item.link}
                     target="_blank"
                     className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
-                    <FaGithub />
-                    Github
+                    Live Preview
+                    <FaExternalLinkAlt />
                   </Link>
                   <Link
                     to={item.details}
                     className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
-                    <FaRegEyeSlash />
                     More Details
+                    <FaRegEyeSlash />
                   </Link>
                 </div>
-                {/* <hr className="border-white/10 mt-5 mb-5" /> */}
               </motion.div>
             ))}
           </div>
@@ -208,37 +206,50 @@ export function TimelineDemo() {
               {
                 img: grocerly,
                 title: "Grocerly",
-                link: "https://github.com/Kijeosowo/Grocerly",
-                github: "https://github.com/Kijeosowo/Grocerly",
-                desc: "A grocery delivery app built with Expo and React Native.",
+                github: "https://github.com/Kijedev/Grocerly",
+                details: "/grocerly",
+                desc: "Grocerly is a React Native e-commerce app that helps users easily shop for and purchase grocery items.",
               },
               {
                 img: Spotify,
                 title: "Spotify Wrapped",
-                link: "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
                 github:
                   "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
-                desc: "A Spotify Wrapped clone with original UI and animations.",
+                details: "/spotify-wrapped",
+                desc: "Re-Built my Spotify Wrapped app with a modern UI and animations.",
               },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Link
-                  to={item.link}
-                  target="_blank"
-                  className="block cursor-pointer"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    width={200}
-                    height={200}
-                    className="rounded-xl hover:scale-105 transition-transform duration-500"
-                  />
-                  <h1 className="text-white font-bold text-3xl mt-3">
-                    {item.title}
-                  </h1>
-                  <p className="text-sm mt-2 text-neutral-600">{item.desc}</p>
-                </Link>
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  width={200}
+                  height={200}
+                  className="rounded-xl hover:scale-105 transition-transform duration-500"
+                />
+                <h1 className="text-white font-bold text-3xl mt-3">
+                  {item.title}
+                </h1>
+                <p className="text-sm mt-2 text-neutral-600">{item.desc}</p>
+
+                {/* Buttons */}
+                <div className="flex gap-4 mt-4">
+                  <Link
+                    to={item.github}
+                    target="_blank"
+                    className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
+                  >
+                    Github
+                    <FaGithub />
+                  </Link>
+                  <Link
+                    to={item.details}
+                    className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
+                  >
+                    More Details
+                    <FaRegEyeSlash />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>

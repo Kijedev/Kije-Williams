@@ -3,19 +3,9 @@ import BackBtn from "../components/BackBtn";
 import { motion } from "framer-motion";
 import { TbChevronsRight } from "react-icons/tb";
 import Footer from "../components/Footer";
-import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
 
 const AiTeacha = () => {
-  //   const [showContent, setShowContent] = useState(false);
-
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setShowContent(true);
-  //     }, 500);
-  //     return () => clearTimeout(timer);
-  //   }, []);
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -53,6 +43,9 @@ const AiTeacha = () => {
     {
       description:
         "Optimized frontend performance through efficient state management, code splitting, and lazy loading, resulting in a reduction in page load times..",
+    },
+    {
+      description: "Worked with Backend developers to Integrate APIs.",
     },
   ];
 
@@ -130,14 +123,14 @@ const AiTeacha = () => {
             handouts in seconds.
           </p>
           <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
-            Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js,
+            Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js, React Hooks
             Git/GitHub.
           </span>
         </motion.header>
 
         <section>
           <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
-            My Role & Contributuions
+            My Role & Contributions
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-10 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">

@@ -16,6 +16,11 @@ import ImoTalentHubLink from "./Details/ImoTalentHub";
 import WebInfluencersLink from "./Details/WebInfluencers";
 import EyeonImoLink from "./Details/EyeonImo";
 import TechsomaLink from "./Details/Techsoma";
+import Techsomame from "./Details/techsomame";
+import Echo from "./Details/Echo";
+import Positivus from "./Details/Positivus";
+import Grocerly from "./Details/Grocerly";
+import Spotify from "./Details/Spotify";
 import NotFound from "./components/NotFound";
 import ErrorBoundary from "./components/ErrorBoundary";
 import MainLayout from "./layouts/MainLayout";
@@ -39,6 +44,11 @@ function App() {
             <Route path="/webinfluencers" element={<WebInfluencersLink />} />
             <Route path="/eyonimo" element={<EyeonImoLink />} />
             <Route path="/techsoma" element={<TechsomaLink />} />
+            <Route path="/techsomame" element={<Techsomame />} />
+            <Route path="/echo" element={<Echo />} />
+            <Route path="/positivus" element={<Positivus />} />
+            <Route path="/grocerly" element={<Grocerly />} />
+            <Route path="/spotify-wrapped" element={<Spotify />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />

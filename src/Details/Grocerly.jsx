@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import { FaGithub } from "react-icons/fa";
 
-const ImoTalentHub = () => {
+const Grocerly = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -15,26 +15,46 @@ const ImoTalentHub = () => {
 
   const responsibilities = [
     {
-      description: "Worked on the development of the Landing page.",
+      description: "In-charge of the Fronted of the app.",
     },
     {
-      description:
-        "Worked on the Responsiveness of the website on all screen sizes.",
+      description: "Developed all the pages of the mobile app.",
+    },
+    {
+      description: "Integrated User Authentication.",
+    },
+    {
+      description: "In-charge of the Translation of the app using i18next.",
+    },
+    {
+      description: "Worked with Backend developers to Integrate APIs.",
     },
   ];
 
   const features = [
     {
-      title: "Verified Profiles",
+      title: "User Authentication",
     },
     {
-      title: "Hiring Talents from any Sector",
+      title: "Internalization",
     },
     {
-      title: "Global Access",
+      title: "Location Services",
     },
     {
-      title: "Transparency",
+      title: "Payment Integration",
+    },
+    {
+      title: "Delivery Tracking",
+    },
+    {
+      title: "Notificatiions",
+    },
+    {
+      title: "Smooth Animations",
+    },
+    {
+      title: "Skeleton Loader",
     },
   ];
 
@@ -51,17 +71,17 @@ const ImoTalentHub = () => {
           className="mt-10 flex flex-col gap-5 ml-6 lg:ml-0"
         >
           <h1 className="text-4xl lg:text-8xl font-bold text-white">
-            ImoTalentHub
+            Grocerly
           </h1>
           <p className="text-neutral-500 text-lg max-w-6xl">
-            ImoTalentHub is a government-backed digital talent marketplace
-            launched by Imo State Governor Hope Uzodimma in July 2025. It is
-            designed as an, "Africa's first digital talent marketplace," aimed
-            at training, certifying, and connecting 100,000 Imo youths with
-            global remote jobs by 2026.
+            Grocerly is a comprehensive grocery delivery mobile application
+            built with Expo and React Native, designed to provide a seamless
+            online grocery shopping and delivery experience.
           </p>
           <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
-            Stacks Used: Next.js, TypeScript, Sanity, Tailwind CSS, Git/GitHub.
+            Stacks Used: React Native, Expo, TypeScript, Nativewind, Git/GitHub,
+            Expo router, Stripe, Google Maps API, Jest & Jest Expo, i18next,
+            expo-localize, React Query, React Hooks.
           </span>
         </motion.header>
 
@@ -82,7 +102,6 @@ const ImoTalentHub = () => {
                 className="border border-white/15 p-4 rounded-lg"
               >
                 <span className="flex gap-2">
-                  {/* <TbChevronsRight className="text-4xl lg:text-2xl" /> */}
                   <p className="text-neutral-500 text-md">
                     {responsibility.description}
                   </p>
@@ -131,9 +150,38 @@ const ImoTalentHub = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-10 flex justify-center text-neutral-500"
+          className="mt-10 flex justify-center"
         >
-          ‼️No Link to the Github Project, this is a private repository.
+          <a
+            href="https://github.com/Kijedev/Grocerly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-[300px] h-[60px] rounded-md border border-white/5
+             flex items-center justify-center overflow-hidden
+             transition duration-300 active:scale-95"
+          >
+            <div
+              className="relative flex items-center gap-2
+               transition-all duration-300 ease-in-out
+               group-hover:translate-x-6"
+            >
+              <FaGithub
+                className="text-white text-2xl
+                 transition-all duration-300 ease-in-out
+                 group-hover:absolute
+                 group-hover:left-8
+                 group-hover:-translate-x-1/2"
+              />
+              <span
+                className="text-white text-[1.04em] whitespace-nowrap
+                 transition-all duration-300 ease-in-out
+                 group-hover:opacity-0
+                 group-hover:translate-x-4"
+              >
+                View on GitHub
+              </span>
+            </div>
+          </a>
         </motion.div>
       </div>
 
@@ -142,4 +190,4 @@ const ImoTalentHub = () => {
   );
 };
 
-export default ImoTalentHub;
+export default Grocerly;

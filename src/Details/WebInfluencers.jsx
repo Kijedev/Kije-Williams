@@ -56,13 +56,13 @@ const WebInfluencers = () => {
             bridge markets and connect communities worldwide.
           </p>
           <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
-            Stacks Used: Next.js, TypeScript, Tailwind CSS.
+            Stacks Used: Next.js, TypeScript, Tailwind CSS, React Hooks, Git/GitHub.
           </span>
         </motion.header>
 
         <section>
           <h2 className="border-l-2 border-red-500 pl-4 mt-10 text-2xl lg:text-4xl ml-6 lg:ml-0">
-            My Role & Contributuions
+            My Role & Contributions
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mt-10 bg-gradient-to-b from-[#111]/10 via-[#000]/50 to-[#111]/10 p-6 rounded-lg">

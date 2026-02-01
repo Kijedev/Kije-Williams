@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import { FaGithub } from "react-icons/fa";
 
-const ImoTalentHub = () => {
+const Techsomame = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -15,26 +15,36 @@ const ImoTalentHub = () => {
 
   const responsibilities = [
     {
-      description: "Worked on the development of the Landing page.",
+      description:
+        "Changed the entire design of the website from the old to the current.",
     },
     {
       description:
-        "Worked on the Responsiveness of the website on all screen sizes.",
+        "Migrated the website from the old design to the current design.",
+    },
+     {
+      description:
+        "Installed Plugins like WP Rocket to improve the speed and optimization of the website.",
+    },
+    {
+      description:
+        "Worked on the SEO Optimization of the website by Installing Plugins like Yoast SEO to impprove the ranking on Google.",
     },
   ];
 
   const features = [
     {
-      title: "Verified Profiles",
+      title: "Reading and staying up-to-date on the latest Tech News / Trend.",
     },
+  ];
+
+  const challenges = [
     {
-      title: "Hiring Talents from any Sector",
-    },
-    {
-      title: "Global Access",
-    },
-    {
-      title: "Transparency",
+      problem: "Problem: Didnt have the knowledge of Wordpress.",
+      solution:
+        "Solution: I had to learn Wordpress to be able to make the necessary design changes and configuration.",
+      outcome:
+        "Outcome: I was able to successfully design and migrate the website from the old design to the new design.",
     },
   ];
 
@@ -51,17 +61,17 @@ const ImoTalentHub = () => {
           className="mt-10 flex flex-col gap-5 ml-6 lg:ml-0"
         >
           <h1 className="text-4xl lg:text-8xl font-bold text-white">
-            ImoTalentHub
+            Techsoma Middle East
           </h1>
           <p className="text-neutral-500 text-lg max-w-6xl">
-            ImoTalentHub is a government-backed digital talent marketplace
-            launched by Imo State Governor Hope Uzodimma in July 2025. It is
-            designed as an, "Africa's first digital talent marketplace," aimed
-            at training, certifying, and connecting 100,000 Imo youths with
-            global remote jobs by 2026.
+            Your ultimate source for insights on the Middle Eastern thriving tech
+            ecosystem. Explore transformative startups, innovative solutions,
+            and the latest developments shaping the continent’s economic future.
+            From fintech to agritech, stay connected to the pulse of Africa’s
+            technological advancement.
           </p>
           <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
-            Stacks Used: Next.js, TypeScript, Sanity, Tailwind CSS, Git/GitHub.
+            Stacks Used: Wordpress, Elementor, WP Bakery.
           </span>
         </motion.header>
 
@@ -106,7 +116,7 @@ const ImoTalentHub = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="border border-white/15 p-4 rounded-lg flex items-center justify-center"
+                className="border border-white/15 p-4 rounded-lg flex items-center justify-left"
               >
                 <p className="text-neutral-500 text-center text-md">
                   {feature.title}
@@ -121,9 +131,23 @@ const ImoTalentHub = () => {
             Key Challenges & Solutions
           </h2>
 
-          <div className="mt-10 ml-10 lg:ml-0">
-            <p className="text-neutral-600">No challenges faced</p>
-          </div>
+          {challenges.map((challenge, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
+              className="border border-white/5 p-4 rounded-lg flex gap-4"
+            >
+              <span className="flex flex-col gap-2">
+                <p className="text-red-500">{challenge.problem}</p>
+                <p className="text-green-500">{challenge.solution}</p>
+                <p className="text-neutral-500">{challenge.outcome}</p>
+              </span>
+            </motion.div>
+          ))}
         </section>
 
         <motion.div
@@ -133,7 +157,7 @@ const ImoTalentHub = () => {
           viewport={{ once: true }}
           className="mt-10 flex justify-center text-neutral-500"
         >
-          ‼️No Link to the Github Project, this is a private repository.
+          ‼️This is a Wordpress Project.
         </motion.div>
       </div>
 
@@ -142,4 +166,4 @@ const ImoTalentHub = () => {
   );
 };
 
-export default ImoTalentHub;
+export default Techsomame;
