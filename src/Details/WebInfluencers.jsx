@@ -36,7 +36,7 @@ const WebInfluencers = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1] font-poppins">
+    <div className="bg-gradient-to-br from-black via-[#000] to-black text-[#ECE7E1] font-poppins">
       <div className="lg:px-0 max-w-7xl mx-auto pt-32">
         <BackBtn />
 

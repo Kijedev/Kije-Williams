@@ -101,7 +101,7 @@ const AiTeacha = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1] font-poppins">
+    <div className="bg-gradient-to-br from-black via-[#000] to-black text-[#ECE7E1] font-poppins">
       {/* <div className="animate-slideUp h-[100vh] bg-gradient-to-b from-black via-[#111] to-black z-100 relative" /> */}
 
       <div className="lg:px-0 max-w-7xl mx-auto pt-32">
