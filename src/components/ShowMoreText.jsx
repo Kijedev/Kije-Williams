@@ -13,7 +13,7 @@ function ShowMoreText({ text, collapsedHeight = 160 }) {
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-lg p-5"
       >
-        <p className="text-sm md:text-md text-neutral-600 dark:text-neutral-500 leading-relaxed">
+        <p className="text-sm md:text-md text-white/50 leading-relaxed">
           {text}
         </p>
 
@@ -26,7 +26,7 @@ function ShowMoreText({ text, collapsedHeight = 160 }) {
       <div className="absolute inset-x-0 bottom-3 flex justify-center">
         <button
           onClick={() => setExpanded(!expanded)}
-          className="relative z-10 flex items-center gap-1.5 rounded-md bg-white/5 px-4 py-1.5 text-sm text-neutral-600 font-semibold dark:text-white backdrop-blur-md transition hover:bg-black/70"
+          className="relative z-10 flex items-center gap-1.5 rounded-md bg-white/5 px-4 py-1.5 text-sm text-white/50-white backdrop-blur-md transition hover:bg-black/70"
         >
           <span>{expanded ? "Show less" : "Show more"}</span>
           <motion.svg

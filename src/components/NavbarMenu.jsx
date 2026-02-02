@@ -50,7 +50,7 @@ const NavbarMenu = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 ">
+    <div className="fixed top-0 left-0 right-0 z-50">
       <div
         className="
       mx-auto
@@ -71,7 +71,7 @@ shadow-lg shadow-black/20 lg:shadow-black/0"
             {navItems.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 hover:text-neutral-500 transition-colors duration-300"
+                className="flex items-center gap-2 transition-colors duration-300"
               >
                 <span className="text-lg">{item.icon}</span>
                 <Link to={item.path}>{item.name}</Link>

@@ -50,11 +50,11 @@ export const WorkHistoryTimeline = ({ data }) => {
 
   return (
     <div
-      className="w-full bg-black dark:bg-black font-poppins md:px-10"
+      className="w-full bg-black font-poppins md:px-10"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 pt-32 px-4 md:px-8 lg:px-10">
-        <h1 className="text-4xl md:text-6xl mb-4 text-white dark:text-white max-w-4xl font-bold">
+        <h1 className="text-4xl md:text-6xl mb-4 text-white max-w-4xl font-bold">
           Work History
         </h1>
       </div>

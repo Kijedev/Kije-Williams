@@ -52,7 +52,7 @@ const About = () => {
             {/* Text */}
             <aside className="lg:py-10">
               <div className="flex flex-col gap-6 text-sm md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-800">
-                <p className="text-justify dark:text-neutral-600 lg:text-[1.2rem] flex flex-col gap-1">
+                <p className="text-justify text-white/30 lg:text-[1.2rem] flex flex-col gap-1">
                   <motion.span
                     variants={fadeInUp}
                     initial="hidden"
@@ -63,11 +63,11 @@ const About = () => {
                     experience, I specialize in transforming complex ideas into
                     seamless, user-centric web experiences. My expertise spans
                     technologies like{" "}
-                    <b>
+                    
                       HTML, CSS, Tailwind CSS, JavaScript, React.js, React
                       Native, TypeScript, Vue.js
-                    </b>
-                    , and version control systems such as <b>Git and GitHub</b>.
+                    
+                    , and version control systems such as Git and GitHub.
                   </motion.span>
 
                   <br />

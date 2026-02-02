@@ -174,7 +174,7 @@ export function TimelineDemo() {
                     target="_blank"
                     className="font-poppins flex items-center gap-2 cursor-pointer text-neutral-600 text-sm border border-white/10 px-4 py-2 rounded-md hover:bg-white/10 hover:text-white transition-colors duration-300"
                   >
-                    Live Preview
+                    Preview
                     <FaExternalLinkAlt />
                   </Link>
                   <Link

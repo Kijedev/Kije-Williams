@@ -47,16 +47,16 @@ export function FlipWordsDemo() {
       {/* Heading */}
       <motion.div
         variants={itemVariants}
-        className="lg:text-8xl text-5xl text-neutral-700 dark:text-neutral-700 lg:text-left text-center lg:px-56 font-light"
+        className="lg:text-8xl text-5xl text-neutral-500 lg:text-left text-center lg:px-56 font-light"
       >
         Build <FlipWords words={words} /> websites and mobile apps with <br />
-        <span className="text-[#fff] font-light">Kije Williams</span>
+        <span className="text-neutral-500 font-light">Kije Williams</span>
       </motion.div>
 
       {/* Paragraph */}
       <motion.p
         variants={itemVariants}
-        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8 max-w-3xl mx-auto text-center font-poppins"
+        className="text-base lg:text-xl lg:leading-8 text-neutral-600 font-light py-8 max-w-3xl mx-auto text-center font-poppins"
       >
         A Certified <strong>Altschool Africa</strong> Frontend Developer
         dedicated to creating visually stunning and user-friendly web and mobile
