@@ -28,10 +28,10 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 pt-32 px-4 md:px-8 lg:px-10">
-        <h2 className="text-4xl md:text-4xl mb-4 text-black text-white max-w-4xl font-poppins">
+        <h2 className="text-4xl md:text-4xl mb-4 text-white max-w-4xl font-poppins">
           My Projects journey
         </h2>
-        <p className="text-neutral-600 text-neutral-600 text-sm md:text-base max-w-sm font-poppins">
+        <p className="text-neutral-600 text-sm md:text-base max-w-sm font-poppins">
           These are some of the projets i've worked on.
         </p>
       </div>
@@ -44,11 +44,11 @@ export const Timeline = ({ data }) => {
             {/* Sticky Year */}
             <div className="sticky top-24 z-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="relative flex items-center">
-                <div className="h-10 absolute left-3 w-10 rounded-full bg-white bg-black flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-neutral-200 bg-neutral-800 border border-neutral-300 border-neutral-700" />
+                <div className="h-10 absolute left-3 w-10 rounded-full flex items-center justify-center">
+                  <div className="h-4 w-4 rounded-full bg-neutral-800" />
                 </div>
 
-                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 text-neutral-500 font-poppins">
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 font-poppins">
                   {item.title}
                 </h3>
               </div>
@@ -68,14 +68,14 @@ export const Timeline = ({ data }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-600 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-white/30 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
