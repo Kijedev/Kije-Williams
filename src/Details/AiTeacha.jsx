@@ -123,8 +123,8 @@ const AiTeacha = () => {
             handouts in seconds.
           </p>
           <span className="border-l-2 border-red-500 pl-4 text-md lg:text-xl text-neutral-500">
-            Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js, React Hooks
-            Git/GitHub.
+            Stacks Used: React.js, TypeScript, Tailwind CSS, Node.js, React
+            Hooks Git/GitHub.
           </span>
         </motion.header>
 
@@ -210,38 +210,9 @@ const AiTeacha = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-10 flex justify-center"
+          className="mt-10 flex justify-center text-neutral-500"
         >
-          <a
-            href="https://github.com/Dongido/AITeacha_v3_design"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative w-[300px] h-[60px] rounded-md border border-white/5
-             flex items-center justify-center overflow-hidden
-             transition duration-300 active:scale-95"
-          >
-            <div
-              className="relative flex items-center gap-2
-               transition-all duration-300 ease-in-out
-               group-hover:translate-x-6"
-            >
-              <FaGithub
-                className="text-white text-2xl
-                 transition-all duration-300 ease-in-out
-                 group-hover:absolute
-                 group-hover:left-8
-                 group-hover:-translate-x-1/2"
-              />
-              <span
-                className="text-white text-[1.04em] whitespace-nowrap
-                 transition-all duration-300 ease-in-out
-                 group-hover:opacity-0
-                 group-hover:translate-x-4"
-              >
-                View on GitHub
-              </span>
-            </div>
-          </a>
+          ‼️No Link to the Github Project, this is a private repository.
         </motion.div>
       </div>
 
