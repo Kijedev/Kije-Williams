@@ -75,7 +75,7 @@ const Contact = () => {
 
             <motion.div
               variants={itemVariants}
-              className="-mt-[20%] md:ml-[-60%] lg:mt-5 -ml-[50%] lg:ml-0"
+              className="mt-[-15%] lg:mt-5 ml-[0%] lg:ml-0"
             >
               <Icons />
             </motion.div>
@@ -83,7 +83,7 @@ const Contact = () => {
         </motion.aside>
 
         <motion.aside
-          className="lg:mt-0 -mt-6"
+          className=""
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
