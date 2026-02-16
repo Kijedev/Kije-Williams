@@ -47,7 +47,7 @@ export function FlipWordsDemo() {
       {/* Heading */}
       <motion.div
         variants={itemVariants}
-        className="lg:text-8xl text-5xl text-neutral-500 lg:text-left text-center lg:px-56 font-light"
+        className="lg:text-8xl text-center text-5xl text-neutral-500 lg:text-left text-center lg:px-56 font-light"
       >
         Build <FlipWords words={words} /> websites and mobile apps with <br />
         <span className="text-neutral-500 font-light">Kije Williams</span>

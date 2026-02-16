@@ -1,7 +1,8 @@
 import React from "react";
-import { FaLinkedinIn, FaGithub, FaTwitter, FaGoogleDrive, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
 import Marquee from "../components/Marquee";
+import Icons from "../components/Icons";
 
 const Footer = () => {
   return (
@@ -11,10 +12,8 @@ const Footer = () => {
       {/* Main Container */}
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 py-14">
         <div className="flex flex-col lg:flex-row justify-between gap-12">
-
           {/* Left Section */}
           <div className="flex flex-col gap-8">
-
             {/* Name + Bio */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-3xl font-light text-neutral-700">
@@ -29,41 +28,7 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4 text-xl">
-              <Link
-                to="https://www.linkedin.com/in/williams-kijeosowo-237749224/"
-                target="_blank"
-                className="hover:text-stone-500 transition-colors"
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link
-                to="https://github.com/Kijeosowo?tab=repositories"
-                target="_blank"
-                className="hover:text-stone-500 transition-colors"
-              >
-                <FaGithub />
-              </Link>
-              <Link
-                to="https://docs.google.com/document/d/1jD5IhwyadOyXQYBmC6Vg6MtcJY50buqClqaBotXe9zQ/edit"
-                target="_blank"
-                className="hover:text-stone-500 transition-colors"
-              >
-                <FaGoogleDrive />
-              </Link>
-              <Link
-                to="https://x.com/Kijeosowo1"
-                target="_blank"
-                className="hover:text-stone-500 transition-colors"
-              >
-                <FaTwitter />
-              </Link>
-              <Link
-                to="https://wa.link/41kcfj"
-                target="_blank"
-                className="hover:text-stone-500 transition-colors"
-              >
-                <FaWhatsapp />
-              </Link>
+              <Icons />
             </div>
           </div>
 
@@ -80,9 +45,6 @@ const Footer = () => {
               <li className="hover:text-stone-500 transition-colors">
                 <a href="/contact">Contact</a>
               </li>
-              <li className="hover:text-stone-500 transition-colors">
-                <a href="#certification">Certification</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -91,7 +53,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-stone-900">
         <p className="text-center text-sm text-neutral-500 py-8">
-          © 2025 Kije Williams. All rights reserved.
+          © 2026 Kije Williams. All rights reserved.
         </p>
       </div>
     </footer>
