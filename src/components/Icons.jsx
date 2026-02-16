@@ -18,7 +18,7 @@ const Icons = () => {
         <FaLinkedinIn />
       </Link>
       <Link
-        to="https://github.com/Kijeosowo?tab=repositories"
+        to="https://github.com/Kijedev"
         className="hover:text-stone-600 transition-colors duration-500"
         title="Github"
         target="_blank"
