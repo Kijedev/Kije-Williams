@@ -1,9 +1,9 @@
 import NavbarMenu from "../components/NavbarMenu";
 import Footercta from "../components/Footercta";
 import Footer from "../components/Footer";
-import DotBackgroundDemo from "./ui/DotBackgroundDemo";
+import DotBackgroundDemo from "../components/ui/DotBackgroundDemo";
 // pages
-import Certification from "../pages/Certification";
+import Certification from "./Certification";
 import CardDemo from "../components/ui/CardDemo";
 import TimelineDemo from "../components/ui/TimelineDemo";
 

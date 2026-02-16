@@ -17,8 +17,7 @@ const Certification = () => {
 
   return (
     <section
-      id="certification"
-      className="bg-gradient-to-br from-black via-[#000] to-[#000] h-screen"
+      className="bg-gradient-to-br from-black via-[#000] to-[#000] lg:h-screen"
     >
         <motion.div
           className="text-center space-y-3 font-poppins"

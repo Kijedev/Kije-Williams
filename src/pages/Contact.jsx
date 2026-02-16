@@ -33,7 +33,7 @@ const itemVariants = {
 
 const Contact = () => {
   return (
-    <section className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1]">
+    <section className="bg-gradient-to-br from-black via-[#000] to-[#000] text-[#ECE7E1]">
       <div className="animate-slideUp lg:h-[100vh] h-[100vh] bg-gradient-to-br from-black via-[#111] to-black relative z-100"></div>
 
       <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[100vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">

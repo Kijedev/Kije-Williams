@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router";
 import "./App.css";
 import "@fontsource/poppins";
 // components
-import Homepage from "./components/Homepage";
+import Homepage from "./pages/Homepage";
 import ScrollToTop from "./components/ScrollToTop";
 // pages
 import About from "./pages/About";
@@ -24,11 +24,15 @@ import Spotify from "./Details/Spotify";
 import NotFound from "./components/NotFound";
 import ErrorBoundary from "./components/ErrorBoundary";
 import MainLayout from "./layouts/MainLayout";
+import SmoothScroll from "./components/SmoothScroll/page";
+
 function App() {
   return (
     <>
-      <CustomCursor />
-      <ScrollToTop />
+      <SmoothScroll>
+        <CustomCursor />
+        <ScrollToTop />
+      </SmoothScroll>
 
       <ErrorBoundary>
         <Routes>

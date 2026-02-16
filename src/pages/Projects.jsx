@@ -139,7 +139,6 @@ const Projects = () => {
   return (
     <section
       className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white"
-      id="projects"
     >
       <main className="py-12 lg:py-32 lg:px-20">
         <div className="px-6 py-12">

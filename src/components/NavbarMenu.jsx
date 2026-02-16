@@ -51,16 +51,16 @@ const NavbarMenu = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-4 lg:px-0">
-      <div className="mx-auto mt-4 max-w-7xl px-6 py-6 flex items-center justify-between rounded-full backdrop-blur-[2px] border border-white/15 shadow-lg shadow-black/20 lg:shadow-black/0">
+      <div className="mx-auto mt-4 max-w-7xl px-6 py-6 flex items-center justify-between rounded-full bg-black/20 backdrop-blur-[2px] border border-white/15 shadow-lg shadow-black/20 lg:shadow-black/0">
         <Logo />
 
         {/* Desktop Menu */}
         <nav className="hidden md:block font-poppins">
-          <ul className="text-white text-[1rem] flex gap-6 font-light">
+          <ul className="text-[1rem] flex gap-6">
             {navItems.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 transition-colors duration-300"
+                className="flex items-center gap-2 transition-colors duration-300 text-white/50 hover:text-white"
               >
                 <span className="text-lg">{item.icon}</span>
                 <Link to={item.path}>{item.name}</Link>

@@ -12,7 +12,7 @@ function DotBackgroundDemo() {
           "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
         )}
       />
-      <div className="pointer-events-none absolute z-50 inset-0 flex items-center justify-center bg-gradient-to-b from-[#000] via-[#111] to-[#000] [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+      <div className="pointer-events-none absolute z-10 inset-0 flex items-center justify-center bg-gradient-to-b from-[#000] via-[#111] to-[#000] [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <p className="relative z-20">
         <FlipWordsDemo />
       </p>
