@@ -1,16 +1,18 @@
-import { VscSend } from "react-icons/vsc";
 import React, { useRef, useState } from "react";
+import { VscSend } from "react-icons/vsc";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
 const Form = () => {
-  const form = useRef();
+  const form = useRef(null);
 
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,20 +22,22 @@ const Form = () => {
   };
 
   const isFormValid =
-    formData.user_name.trim() &&
-    formData.user_email.trim() &&
-    formData.message.trim();
+    formData.user_name.trim() !== "" &&
+    formData.user_email.trim() !== "" &&
+    formData.message.trim() !== "";
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (!isFormValid) return;
+    if (!isFormValid || loading) return;
+
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "service_8bjvfdz",
+        "service_8bjvfdz", 
         "template_ibv4bus",
         form.current,
-        "fIbMF0nnFpZ7R0fDF"
+        "fIbMF0nnFpZ7R0fDF"  
       )
       .then(() => {
         Swal.fire({
@@ -42,10 +46,9 @@ const Form = () => {
           title: "Your Email has been sent!",
           showConfirmButton: false,
           timer: 2000,
-          background: "#ECE7E1",
         });
 
-        // Optional: reset form
+        form.current.reset(); 
         setFormData({
           user_name: "",
           user_email: "",
@@ -53,99 +56,77 @@ const Form = () => {
         });
       })
       .catch((error) => {
-        console.log("FAILED...", error.text);
+        console.error("FAILED...", error);
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Failed to send message. Please try again.",
+        });
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
   return (
-    <div>
+    <div className="flex justify-center">
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-[50%] lg:w-[100%] mt-[10%] font-poppins"
+        className="w-full -mt-6 lg:mt-16 font-poppins space-y-6"
       >
-        {/* Name */}
         <div>
-          <label className="text-white font-light">Name</label>
-          <br />
+          {/* <label className="text-white font-light">Name</label> */}
           <input
             type="text"
             name="user_name"
             value={formData.user_name}
             onChange={handleChange}
+            required
             placeholder="Your Full Name..."
-            className="placeholder:text-stone-600 bg-transparent border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
+            className="w-full mt-3 p-4 bg-transparent border border-stone-800 rounded-lg placeholder:text-stone-600 outline-none focus:border-white transition"
           />
         </div>
 
-        <br />
-
-        {/* Email */}
         <div>
-          <label className="font-light text-white">E-mail</label>
-          <br />
+          {/* <label className="text-white font-light">E-mail</label> */}
           <input
             type="email"
             name="user_email"
             value={formData.user_email}
             onChange={handleChange}
+            required
             placeholder="Your E-mail..."
-            className="placeholder:text-stone-600 bg-transparent border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
+            className="w-full mt-3 p-4 bg-transparent border border-stone-800 rounded-lg placeholder:text-stone-600 outline-none focus:border-white transition"
           />
         </div>
 
-        <br />
-
-        {/* Message */}
         <div>
-          <label className="font-light text-white">Message</label>
-          <br />
+          {/* <label className="text-white font-light">Message</label> */}
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Talk to me, how can i help you?"
-            className="placeholder:text-stone-600 bg-transparent border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] h-[15vh] mt-3 outline-none"
+            required
+            rows="5"
+            placeholder="Talk to me, how can I help you?"
+            className="w-full mt-3 p-4 bg-transparent border border-stone-800 rounded-lg placeholder:text-stone-600 outline-none focus:border-white transition"
           />
         </div>
 
-        {/* Button */}
-        <div className="mt-10">
-          <button
-            type="submit"
-            disabled={!isFormValid}
-            className={`group lg:w-[200%] w-[200%] md:w-[100%] h-[60px] rounded-md
-              flex items-center justify-center overflow-hidden
-              transition duration-300 active:scale-95
-              ${
-                isFormValid
-                  ? "bg-[#FFFFFF] hover:bg-[#ECE7E1] text-[#1A1818]"
-                  : "bg-gray-500 cursor-not-allowed opacity-50"
-              }`}
-          >
-            <div
-              className="relative flex items-center gap-2
-              transition-all duration-300 ease-in-out
-              group-hover:translate-x-6"
-            >
-              <span
-                className="text-[1.04em] whitespace-nowrap
-                transition-all duration-300 ease-in-out
-                group-hover:opacity-0
-                group-hover:translate-x-4"
-              >
-                Send Message
-              </span>
-              <VscSend
-                className="text-2xl
-                transition-all duration-300 ease-in-out
-                group-hover:absolute
-                group-hover:left-8
-                group-hover:-translate-x-1/2"
-              />
-            </div>
-          </button>
-        </div>
+        <button
+          type="submit"
+          disabled={!isFormValid || loading}
+          className={`group w-full h-14 rounded-lg flex items-center justify-center transition duration-300 active:scale-95
+            ${
+              isFormValid && !loading
+                ? "bg-[#ECE7E1] hover:bg-[#ECE7E1]/60 text-black"
+                : "bg-white/50 cursor-not-allowed opacity-60 text-white"
+            }`}
+        >
+          {loading ? "Sending..." : "Send Message"}
+          {!loading && <VscSend className="ml-2 text-xl" />}
+        </button>
       </form>
     </div>
   );

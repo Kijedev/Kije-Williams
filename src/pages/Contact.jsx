@@ -33,66 +33,67 @@ const itemVariants = {
 
 const Contact = () => {
   return (
-    <section className="bg-gradient-to-br from-black via-[#000] to-[#000] text-[#ECE7E1]">
-      <div className="animate-slideUp lg:h-[100vh] h-[100vh] bg-gradient-to-br from-black via-[#111] to-black relative z-100"></div>
+    <section className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1] flex items-center">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 py-20">
+        
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
 
-      <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[100vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">
-        <motion.aside
-          className="flex gap-5 mt-20 lg:mt-0"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="flex flex-col">
+          {/* LEFT SIDE */}
+          <motion.aside
+            className="flex-1 mt-10 lg:mt-0"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <motion.h1
               variants={itemVariants}
-              className="text-[#ECE7E1] lg:text-[12rem] md:text-[10rem] text-[7rem] Birthstone"
+              className="text-[8rem] md:text-[8rem] lg:text-[10rem] leading-none Birthstone"
             >
               Hello!
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="dark:text-neutral-600 text-lg font-poppins"
+              className="mt-6 text-base md:text-lg text-neutral-400 font-poppins max-w-md"
             >
-              Do you need a beautiful, well-structured website that <br />
-              you can own and maintain yourself?
+              Do you need a beautiful, well-structured website that you can own
+              and maintain yourself?
             </motion.p>
 
             <motion.p
               variants={itemVariants}
-              className="mt-3 dark:text-neutral-600 text-lg font-poppins"
+              className="mt-4 text-base md:text-lg text-neutral-400 font-poppins"
             >
               Reach me:{" "}
               <Link
-                className="dark:text-neutral-500 font-poppins"
+                className="text-neutral-300 hover:text-white transition"
                 to="mailto:kijewilliams01@gmail.com?subject=Hello%20There&body=I%20want%20to%20create%20a%20website"
               >
-                @kijewilliams01@gmail.com
+                kijewilliams01@gmail.com
               </Link>
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="mt-[-15%] lg:mt-5 ml-[0%] lg:ml-0"
+              className="-mt-10 lg:mt-8"
             >
               <Icons />
             </motion.div>
-          </div>
-        </motion.aside>
+          </motion.aside>
 
-        <motion.aside
-          className=""
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <Form />
-        </motion.aside>
+          {/* RIGHT SIDE */}
+          <motion.aside
+            className="flex-1 w-full"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Form />
+          </motion.aside>
 
-        <br />
+        </div>
       </div>
     </section>
   );
