@@ -19,6 +19,8 @@ import Unsplash from "../../Image/Unsplash.png";
 import grocerly from "../../Image/grocerly1.png";
 import Spotify from "../../Image/spotify.jpeg";
 import Jeton from "../../Image/jeton.png";
+import Pumpay from "../../Image/pumpay.png";
+import Ekhostudios from "../../Image/ekhostudios.png";
 
 const containerVariants = {
   hidden: {},
@@ -61,12 +63,22 @@ export function TimelineDemo() {
           <div className="grid lg:grid-cols-2 gap-y-10 gap-x-6">
             {[
               {
-                img: Jeton,
-                title: "Jeton",
-                link: "https://jetonn.netlify.app/",
-                github: "https://github.com/Kijedev/jeton",
-                details: "/jeton",
-                desc: "Jeton is a versatile digital wallet and payment app that enables users to securely store, send, receive, and exchange money in multiple currencies worldwide.",
+                img: Pumpay,
+                title: "Pumpay",
+                link: "https://pumpay.co",
+                // github: "https://github.com/Kijedev/jeton",
+                details: "/pumpay",
+                live: true,
+                desc: "Pumpay is a Fuel Delivery Service that allows users to conveniently order fuel to be delivered directly to their location, providing a hassle-free and efficient fueling experience.",
+              },
+              {
+                img: Ekhostudios,
+                title: "Ekhostudios",
+                link: "https://ekhostudios.co",
+                github: "https://github.com/Kijedev/Ken-williams-portfolio",
+                details: "/ekhostudios",
+                live: true,
+                desc: "Ekhostudios is a creative agency that specializes creating cinematic product videos.",
               },
               {
                 img: AiTeacha,
@@ -77,15 +89,23 @@ export function TimelineDemo() {
                 live: true,
                 desc: "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
               },
-              {
-                img: WebInfluencers,
-                title: "WebInfluencers",
-                link: "https://www.webinfluencers.org/",
-                github: "https://github.com/Kijedev/webinfluencers",
-                details: "/webinfluencers",
-                live: true,
-                desc: "Strategic communications, AI innovation, talent platforms, and media publishing.",
-              },
+              // {
+              //   img: Jeton,
+              //   title: "Jeton",
+              //   link: "https://jetonn.netlify.app/",
+              //   github: "https://github.com/Kijedev/jeton",
+              //   details: "/jeton",
+              //   desc: "Jeton is a versatile digital wallet and payment app that enables users to securely store, send, receive, and exchange money in multiple currencies worldwide.",
+              // },
+              // {
+              //   img: WebInfluencers,
+              //   title: "WebInfluencers",
+              //   link: "https://www.webinfluencers.org/",
+              //   github: "https://github.com/Kijedev/webinfluencers",
+              //   details: "/webinfluencers",
+              //   live: true,
+              //   desc: "Strategic communications, AI innovation, talent platforms, and media publishing.",
+              // },
               {
                 img: Imotalenthub,
                 title: "Imo Talent-Hub",
@@ -210,14 +230,14 @@ export function TimelineDemo() {
                 details: "/grocerly",
                 desc: "Grocerly is a React Native e-commerce app that helps users easily shop for and purchase grocery items.",
               },
-              {
-                img: Spotify,
-                title: "Spotify Wrapped",
-                github:
-                  "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
-                details: "/spotify-wrapped",
-                desc: "Re-Built my Spotify Wrapped app with a modern UI and animations.",
-              },
+              // {
+              //   img: Spotify,
+              //   title: "Spotify Wrapped",
+              //   github:
+              //     "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
+              //   details: "/spotify-wrapped",
+              //   desc: "Re-Built my Spotify Wrapped app with a modern UI and animations.",
+              // },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <img

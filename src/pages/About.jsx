@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import image from "../Image/profilepic.jpg";
+import image from "../Image/profilepic.jpeg";
 import { Link } from "react-router";
 import Download from "../components/Download";
 import { motion } from "framer-motion";

@@ -10,6 +10,8 @@ import Contact from "./pages/Contact";
 import Certification from "./pages/Certification";
 import CustomCursor from "./components/ui/CustomCursor";
 import TimelineDemo from "./components/ui/TimelineDemo";
+import Pumpay from "./Details/Pumpay";
+import Ekhostudios from "./Details/Ekhostudios";
 import JetonLink from "./Details/Jeton";
 import AiTeachaLink from "./Details/AiTeacha";
 import ImoTalentHubLink from "./Details/ImoTalentHub";
@@ -42,6 +44,8 @@ function App() {
             <Route path="/projects" element={<TimelineDemo />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/certification" element={<Certification />} />
+            <Route path="/pumpay" element={<Pumpay />} />
+            <Route path="/ekhostudios" element={<Ekhostudios />} />
             <Route path="/jeton" element={<JetonLink />} />
             <Route path="/aiteacha" element={<AiTeachaLink />} />
             <Route path="/imotalenthub" element={<ImoTalentHubLink />} />
