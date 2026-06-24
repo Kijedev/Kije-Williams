@@ -43,23 +43,23 @@ const About = () => {
             className="px-6 lg:px-24 lg:mt-[-90vh] mt-[-95vh]"
           >
             <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-10 lg:text-[10rem] Birthstone">
-              About
+              About me!
             </h1>
           </motion.header>
 
           {/* Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 px-6 lg:px-24">
             {/* Text */}
             <aside className="lg:py-10">
               <div className="flex flex-col gap-6 text-sm md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-800">
-                <p className="text-justify text-white/30 lg:text-[1.2rem] flex flex-col gap-1">
+                <p className="lg:text-justify text-white/50 lg:text-[1rem] leading-relaxed flex flex-col gap-1">
                   <motion.span
                     variants={fadeInUp}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2, delay: 0.3 }}
                   >
-                    As a passionate Frontend Web Developer with 3 years of
+                    As a passionate Frontend Web Developer with 4+ years of
                     experience, I specialize in transforming complex ideas into
                     seamless, user-centric web experiences. My expertise spans
                     technologies like{" "}
@@ -133,7 +133,7 @@ const About = () => {
             >
               <img
                 src={image}
-                className="lg:w-full lg:max-w-md h-auto rounded-lg"
+                className="lg:w-full lg:max-w-md h-auto rounded-xl"
                 alt="Profile"
               />
             </motion.aside>
